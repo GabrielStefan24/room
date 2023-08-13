@@ -31,7 +31,7 @@ export const skills = [
   },
 
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     icon: tailwind,
   },
 

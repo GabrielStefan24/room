@@ -7,7 +7,7 @@ const Section = (props) => {
   return (
     <section
       className="  h-screen w-screen p-8 max-w-screen-2xl mx-auto
-    flex flex-col items-start justify-center mb-40"
+    flex flex-col items-start justify-center mb-60"
     >
       {children}
     </section>
@@ -45,24 +45,21 @@ const About = () => {
     <Section>
       <div className="flex flex-col gap-20 justify-center h-full w-full">
         <div className=" w-full flex flex-col items-center mt-20">
-          <h1 className=" text-5xl font-bold text-slate-900 ">
+          <h1 className=" text-2xl sm:text-5xl font-bold text-slate-900 ">
             I'm a self-taught front-end web developer.
           </h1>
-          <p className="text-2xl  text-slate-900 mt-8 font-bold ">
+          <p className=" text-md sm:text-2xl  text-slate-900 mt-8 font-bold ">
             Below are some of my hobbies and skills
           </p>
         </div>
-        <div className=" w-1/3 flex flex-col  rounded-md p-6 ">
+        <div className=" sm:w-1/3 flex flex-col  rounded-md p-6 ">
           <div className="flex flex-col ">
             <h1 className=" text-slate-900 w-full border-b border-slate-900 text-3xl italic">
               WEB
             </h1>
-            <div className="flex flex-wrap p-6 gap-2">
+            <div className="grid grid-cols-3 p-2 gap-2  place-items-start">
               {skills.map((el) => (
-                <div
-                  key={el.name}
-                  className="flex items-center justify-center flex-col gap-2"
-                >
+                <div key={el.name} className="flex flex-col gap-2">
                   <img src={el.icon.src} alt={el.name} className="w-10 h-10 " />
                   <p className="text-center text-sm text-white">{el.name}</p>
                 </div>
